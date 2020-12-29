@@ -6,6 +6,10 @@
 #define MAX_N 100005
 #define INT_MIN -2147483648
 
+/* 本题一个直观的做法是优先队列，但是O(mlog(m+n))的复杂度太高。
+ * 通过观察可以证明切分结果的单调性，我们用三个普通队列分别维护即可，无需
+ * 利用优先队列维护所有的数值。*/
+
 int max_of_three(const int a,
                  const int b,
                  const int c) {
